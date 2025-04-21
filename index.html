@@ -1,93 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sinful bonds</title>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Quicksand&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Quicksand', sans-serif;
-        background: linear-gradient(#e9e4f0, #d3cce3);
-        color: #2e2b5f;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Fantasy Webcomic</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Quicksand&display=swap" rel="stylesheet" />
+  <style>
+    /* ✨ Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      header {
-        background-color: #5d4e99;
-        color: white;
-        padding: 40px 20px;
-        font-family: 'IM Fell English SC', serif;
-        font-size: 2.5em;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      }
+    body {
+      background: radial-gradient(circle at top, #2e003e, #0f001a);
+      color: #e6d6ff;
+      font-family: 'Quicksand', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-      .intro {
-        margin: 30px auto;
-        max-width: 600px;
-        padding: 0 20px;
-      }
+    /* ✨ Glowing Header */
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      font-family: 'IM Fell English SC', serif;
+      font-size: 3em;
+      color: #d6b1ff;
+      text-shadow: 0 0 15px #a47ce8, 0 0 25px #c798ff;
+      animation: floatHeader 3s ease-in-out infinite alternate;
+    }
 
-      .chapter-buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin: 40px auto;
-        max-width: 800px;
-      }
-      
-      .chapter-buttons a {
-  text-decoration: none;
-  background-color: #7d6cb3;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(125, 108, 179, 0.4);
-  font-size: 1.2em;
-  transition: all 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
+    @keyframes floatHeader {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
 
-.chapter-buttons a:hover {
-  background-color: #a892f0;
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #d5c2ff, 0 0 35px #a58cf5, 0 0 40px #dcd0ff;
-}
-      
-      footer {
-        margin-top: 60px;
-        background-color: #897fb3;
-        color: white;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      ✦ Sinful bonds ✦
-    </header>
+    /* ✨ Intro Paragraph */
+    .intro {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.2em;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
-    <div class="intro">
-      <p>
-        welcome to obey me webcomic , a story about three girls and exploding onces in a while 
-        if by any chance your one of the people which are working on this comic with me and see how messy this webiste send me shame cat
-        // i promise ill make it look good just trust // the obey me charcaters are no ours , please dont sue us frin using them we are just board people🌿✨
-      </p>
-    </div>
+    /* ✨ Chapters Section */
+    .chapters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
 
-    <div class="chapter-buttons">
-      <a href="porlogue.html">Prologue</a>
-      <a href="chapter1.html">Chapter 1: charlotte</a>
-      <a href="chapter2.html">Chapter 2: ash</a>
-      <a href="chapter3.html">Chapter 3: violet</a>
-      <a href="chapter4.html">Chapter 4: meow meow</a>
-    </div>
+    .chapter-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #834cf2;
+      border-radius: 12px;
+      padding: 20px 30px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      box-shadow: 0 0 15px #6f3dfc50;
+      transition: all 0.3s ease;
+      position: relative;
+      backdrop-filter: blur(6px);
+    }
 
-    <footer>
-      © 2025 sinful bonds • Contact: sinfulbonds@gmail.com
-    </footer>
-  </body>
+    .chapter-card:hover {
+      background-color: rgba(131, 76, 242, 0.2);
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #b88cff, 0 0 40px #c8a2ff;
+    }
+
+    /* ✨ Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      color: #a783da;
+      margin-top: 40px;
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    /* Optional sparkles (hover animation) */
+    .chapter-card::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #ffffff20;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .chapter-card:hover::after {
+      opacity: 1;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { box-shadow: 0 0 15px #b783ff50; }
+      to { box-shadow: 0 0 30px #d7b2ff; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    ✦ My Fantasy Webcomic ✦
+  </header>
+
+  <div class="intro">
+    <p>
+      Welcome, traveler. You've found the gateway to a story woven with stars, secrets, and ancient magic. Begin your journey below. ✨📜
+    </p>
+  </div>
+
+  <section class="chapters">
+    <a href="chapter1.html" class="chapter-card">Chapter 1: Awakening</a>
+    <a href="chapter2.html" class="chapter-card">Chapter 2: The Forest</a>
+    <a href="chapter3.html" class="chapter-card">Chapter 3: Shadows</a>
+    <!-- Add more chapters here as your comic grows -->
+  </section>
+
+  <footer>
+    © 2025 YourName | All rights reserved
+  </footer>
+
+</body>
 </html>
 
