@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Webcomic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sinful bonds </title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Quicksand&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      margin: 0;
-      font-family: 'Uncial Antiqua', cursive;
-      background: linear-gradient(160deg, #001633, #0a1a40, #001e4d);
-      color: #d0e8ff;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #f3e6ff, #cbb7ff);
+      color: #3a1d6d;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       overflow-x: hidden;
     }
 
@@ -19,98 +27,115 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 20px;
-      animation: float 4s ease-in-out infinite alternate;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
     }
 
-    header img {
-      max-width: 400px;
-      height: auto;
-      filter: drop-shadow(0 0 10px #6db0ff);
+    .title-img {
+      width: 300px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      margin: 30px 0;
-      flex-wrap: wrap;
+      gap: 30px;
+      padding: 10px 0;
+      background-color: #e6ccff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin: 0 20px;
     }
 
     nav a {
-      color: #b4d9ff;
       text-decoration: none;
-      font-size: 1.2em;
-      padding: 10px 20px;
-      border: 2px solid #3b6ca8;
-      border-radius: 8px;
-      background-color: rgba(0, 46, 91, 0.4);
+      color: #3a1d6d;
+      font-weight: bold;
+      font-size: 14px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      background-color: #1a3e70;
-      color: #ffffff;
-      box-shadow: 0 0 15px #6db0ff;
+      color: #7f3bcf;
+      text-shadow: 0 0 5px #d5b3ff;
     }
 
-    .chapters {
+    main {
+      flex: 1;
+      padding: 40px 20px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 40px auto;
-      max-width: 900px;
-      padding: 0 20px;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
     }
 
-    .chapter-btn {
-      background: #1e3a60;
-      color: #cbe6ff;
+    .chapter-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin-top: 20px;
+    }
+
+    .chapter-button {
+      background: #a574e8;
+      color: white;
       padding: 15px 25px;
       border: none;
-      border-radius: 10px;
-      font-size: 1em;
-      cursor: pointer;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 16px;
       transition: 0.3s ease;
-      box-shadow: 0 0 10px rgba(109, 176, 255, 0.3);
+      box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
     }
 
-    .chapter-btn:hover {
-      background: #2c4d7d;
-      box-shadow: 0 0 20px #6db0ff;
+    .chapter-button:hover {
+      background: #8245c2;
       transform: scale(1.05);
+      box-shadow: 0 0 20px #b07fff, 0 0 10px #7c42c9;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-      100% {
-        transform: translateY(-10px);
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #663399;
+      background-color: #e6ccff;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="your-title.png" alt="Webcomic Title" />
+    <!-- Replace the image source below with your custom PNG title -->
+    <img src="name 1.png" alt="Webcomic Title" class="title-img">
   </header>
 
   <nav>
-    <a href="#">Extra Information</a>
-    <a href="#">The Artist & Writer</a>
-    <a href="#">About Characters</a>
+    <a href="#info">Extra Info</a>
+    <a href="#team">Artist & Writer</a>
+    <a href="#characters">Characters</a>
   </nav>
 
-  <section class="chapters">
-    <button class="chapter-btn">Chapter 1</button>
-    <button class="chapter-btn">Chapter 2</button>
-    <button class="chapter-btn">Chapter 3</button>
-    <button class="chapter-btn">Chapter 4</button>
-    <!-- Add more chapters here -->
-  </section>
+  <main>
+    <h2>Chapters</h2>
+    <div class="chapter-section">
+      <button class="chapter-button">Chapter 1 ash </button>
+      <button class="chapter-button">Chapter 2 charlotte </button>
+      <button class="chapter-button">Chapter 3 violet </button>
+      <!-- Add more as needed -->
+    </div>
+  </main>
 
+  <footer>
+    &copy; 2025 moew mow meow . hope it wokrs and if you see this it means you have to pay me .
+  </footer>
 </body>
 </html>
