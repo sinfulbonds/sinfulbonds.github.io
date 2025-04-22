@@ -3,188 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>sinful bonds</title>
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Quicksand&display=swap" rel="stylesheet" />
+  <title>My Webcomic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
   <style>
-    /* ✨ Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background: radial-gradient(circle at top, #2e003e, #0f001a);
-      color: #e6d6ff;
+      margin: 0;
       font-family: 'Quicksand', sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    
-    /* ✨ Glowing Header */
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-      font-family: 'IM Fell English SC', serif;
-      font-size: 3em;
-      color: #d6b1ff;
-      text-shadow: 0 0 15px #a47ce8, 0 0 25px #c798ff;
-      animation: floatHeader 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes floatHeader {
-      from { transform: translateY(0); }
-      to { transform: translateY(-50px); }
-    }
-
-    /* ✨ Intro Paragraph */
-    .intro {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      padding: 20px;
-      line-height: 1.6;
-    }
-
-    /* ✨ Chapters Section */
-    .chapters {
+      background: linear-gradient(to bottom, #1a002a, #0e001a);
+      color: #eee;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
 
-    .chapter-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid #834cf2;
-      border-radius: 12px;
-      padding: 20px 30px;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-      box-shadow: 0 0 15px #6f3dfc50;
-      transition: all 0.3s ease;
-      position: relative;
+    header {
+      padding: 20px;
+      background-color: rgba(20, 0, 40, 0.7);
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 12px #7c42c9;
+    }
+
+    header img {
+      max-width: 350px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #b88cff);
+    }
+
+    .main-container {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .side-image {
+      width: 80px;
+      height: auto;
+      margin: 0 15px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .comic-section {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 25px #6e3fc550;
       backdrop-filter: blur(6px);
     }
 
-    .chapter-card:hover {
-      background-color: rgba(131, 76, 242, 0.2);
-      transform: scale(1.05);
-      box-shadow: 0 0 30px #b88cff, 0 0 40px #c8a2ff;
+    .chapter-button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      color: #e6d6ff;
+      background-color: #532a8d;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      width: 80%;
+      max-width: 400px;
     }
 
-    /* ✨ Footer */
+    .chapter-button:hover {
+      background-color: #8245c2;
+      box-shadow: 0 0 20px #b07fff, 0 0 10px #7c42c9;
+      transform: scale(1.05);
+    }
+
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
+      color: #a88ed6;
       font-size: 0.9em;
-      color: #a783da;
-      margin-top: 40px;
-      background-color: rgba(255, 255, 255, 0.03);
     }
-
-    /* Optional sparkles (hover animation) */
-    .chapter-card::after {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px #ffffff20;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .chapter-card:hover::after {
-      opacity: 1;
-      animation: pulse 1.5s infinite alternate;
-    }
-
-    @keyframes pulse {
-      from { box-shadow: 0 0 5px #b783ff50; }
-      to { box-shadow: 0 0 15px #d7b2ff; }
-    }
-    .chapter-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 200px;
-}
-
-.chapter-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 12px #a78bfa88;
-}
-
-.chapter-title {
-  font-weight: bold;
-  font-size: 1.1em;
-}
-    <a href="chapter1.html" class="chapter-card">
-  <img src="chapter1-cover.jpg" alt="Chapter 1 Cover" class="chapter-img">
-  <div class="chapter-title">Chapter 1: Awakening</div>
-</a>
-    
-.chapter-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 200px;
-}
-
-.chapter-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 12px #a78bfa88;
-}
-
-.chapter-title {
-  font-weight: bold;
-  font-size: 1.1em;
-}
-    .chapter-title {
-  animation: floatText 3s ease-in-out infinite alternate;
-}
-
-@keyframes floatText {
-  from { transform: translateY(0); }
-  to { transform: translateY(-6px); }
-}
-    
   </style>
 </head>
 <body>
 
+  <!-- 🌌 Custom PNG Title -->
   <header>
-    ✦ Sinful Bonds ✦
+    <img src="your-custom-logo.png" alt="My Webcomic Logo" />
   </header>
 
-  <div class="intro">
-    <p>
-      Welcome, traveler. You've found the gateway to a story woven with stars, secrets, and ancient magic. Begin your journey below. ✨📜
-    </p>
+  <!-- ✨ Main Comic Layout -->
+  <div class="main-container">
+    <!-- Left Decoration -->
+    <img src="left-deco.png" class="side-image" alt="Decor Left" />
+
+    <!-- Comic Section -->
+    <div class="comic-section">
+      <h2>Chapters</h2>
+      <a href="chapter1.html" class="chapter-button">Chapter 1: The Beginning</a>
+      <a href="chapter2.html" class="chapter-button">Chapter 2: Into the Mist</a>
+      <a href="chapter3.html" class="chapter-button">Chapter 3: Whispers</a>
+      <!-- Add more buttons here -->
+    </div>
+
+    <!-- Right Decoration -->
+    <img src="right-deco.png" class="side-image" alt="Decor Right" />
   </div>
 
-  <section class="chapters">
-    <a href="chapter1.html" class="chapter-card">Chapter 1: ash</a>
-    <a href="chapter2.html" class="chapter-card">Chapter 2: charlotte</a>
-    <a href="chapter3.html" class="chapter-card">Chapter 3: violet</a>
-    <!-- Add more chapters here as your comic grows -->
-  </section>
-<img scr="shame.png" alt="shame cat" />
+  <!-- ✏️ Footer -->
   <footer>
-    © 2025 your mum | ummm we dont have any rights for this 
-    , we just hoping they dont find us so yea // the only rights we got is for our ocs in this story 
+    © 2025 YourName | All rights reserved
   </footer>
 
 </body>
