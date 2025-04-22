@@ -128,7 +128,39 @@
   font-weight: bold;
   font-size: 1.1em;
 }
+    <a href="chapter1.html" class="chapter-card">
+  <img src="chapter1-cover.jpg" alt="Chapter 1 Cover" class="chapter-img">
+  <div class="chapter-title">Chapter 1: Awakening</div>
+</a>
+    
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+}
 
+.chapter-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 12px #a78bfa88;
+}
+
+.chapter-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+    .chapter-title {
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+    
   </style>
 </head>
 <body>
